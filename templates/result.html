@@ -1,0 +1,60 @@
+<!-- result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-container {
+            text-align: center;
+        }
+   
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+    <title>Phishing Detector</title>
+</head>
+
+<body>
+
+    <div class="result-container">
+    <h1>Phishing Detection Result</h1>
+        <div class="result">
+            {% if prediction == 1 %}
+            <p class="text-danger">Phishing URL detected!</p>
+            {% else %}
+            <p class="text-success">Legitimate URL detected.</p>
+            {% endif %}
+        </div>
+
+        <form action="{{ url_for('restart_system') }}" method="post">
+            <button type="submit">Restart System</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
