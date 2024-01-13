@@ -50,5 +50,3 @@ def restart_system():
     # Add any cleanup or reset code here
     return redirect(url_for('home'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
