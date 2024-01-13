@@ -1,6 +1,6 @@
 Flask
 pandas
-urlib
+urllib3
 bs4
 whois
 requests
