@@ -34,6 +34,20 @@ The feature extraction process involves analyzing various attributes of URLs, do
 16. **Checks the status of the right-click attribute (`Right_Click`)**: Checks if the right-click functionality is disabled.
 17. **Checks the number of forwardings (`Web_Forwards`)**: Checks the number of redirects the website has.
 
+## Model
+
+The model used for detecting phishing websites is AdaBoost, trained on a dataset of 10,000 URLs. The dataset was preprocessed similarly to the input URLs to ensure consistency in feature extraction. The AdaBoost model achieved an R² score of 8.62, indicating its effectiveness in distinguishing between phishing and legitimate websites.
+
+### Comparison with Other Models
+
+To benchmark the performance of the AdaBoost model, we compared it with some other commonly used models:
+
+- **Logistic Regression**: R2 score:8.14
+- **Random Forest**: R2 score:8.27
+- **Support Vector Machine (SVM)**: R2 score:8.32
+
+The AdaBoost model outperformed these models in terms of accuracy and R² score of 8.62, making it the preferred choice for this project.
+
 ## Installation
 
 1. Clone the repository:
